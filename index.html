@@ -91,6 +91,26 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             animation: fadeIn 1.5s ease-in;
         }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .gallery {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .screenshot {
+                max-width: 45%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -98,7 +118,10 @@
         <div class="heart">❤️</div>
         <h1>I Love You, World?</h1>
         <p class="subtitle">A special message just for you</p>
-        <img src="screenshot.png" alt="Special moment" class="screenshot">
+        <div class="gallery">
+            <img src="screenshot.png" alt="Gen AI Advertising Course" class="screenshot">
+            <img src="interview-metaforms.png" alt="Interview with Metaforms" class="screenshot">
+        </div>
     </div>
 </body>
 </html>
